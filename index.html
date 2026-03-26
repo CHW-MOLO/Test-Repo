@@ -32,17 +32,23 @@
       <h1>Velkommen til min simple side</h1>
       <p>Det her er en lille HTML-side med en overskrift, tekst og en knap.</p>
       <h1>Velkommen</h1>
-      <p>Det her er en simpel HTML-side med lidt tekst og en knap.</p>
+      <p>Det her er en simpel HTML-side med lidt tekst og to knapper.</p>
       <button id="myButton" type="button">Klik mig</button>
+      <button id="helloButton" type="button">Sig hej</button>
       <p id="status"></p>
     </main>
 
     <script>
       const button = document.getElementById("myButton");
+      const helloButton = document.getElementById("helloButton");
       const status = document.getElementById("status");
 
       button.addEventListener("click", () => {
         status.textContent = "Du klikkede på knappen!";
+      });
+
+      helloButton.addEventListener("click", () => {
+        status.textContent = "Hej med dig!";
       });
     </script>
   </body>
